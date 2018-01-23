@@ -21,7 +21,7 @@ To setup the example:
 1.  Copy or symlink the Samples directory to be the server's (nginx/apache) document root.
 1.  Setup a MySQL database:
   1.  CREATE DATABASE auth
-  1.  mysql -uroot -p auth < sql/session.table.create.sql
+  1.  mysql -u root -p auth < sql/session.table.create.sql
 1.  Edit config.php 
   1.  Change OAUTH_CLIENT_ID to be the client_id from the GrowthZone > Setup > Client Applications page.
   1.  Change OAUTH_CLIENT_SECRET to be the client_secret from the GrowthZone > Setup > Client Applications page.
