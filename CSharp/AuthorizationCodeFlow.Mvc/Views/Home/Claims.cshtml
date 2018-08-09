@@ -1,0 +1,23 @@
+﻿@model MicroNet.MMP.Shared.ClaimsResponse
+@using System.Security.Claims;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MemberZone Authorization Sample</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach (var claim in Model.Claims)
+            {
+                <li><strong>@claim.Name</strong>: @claim.Value</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

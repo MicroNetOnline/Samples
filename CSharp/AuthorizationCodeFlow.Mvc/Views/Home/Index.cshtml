@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MemberZone Authorization Sample</title>
+    </head>
+    <body>
+    <div>
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+            <input type="submit" value="Login" />
+        }
+    </div>
+    </body>
+</html>
