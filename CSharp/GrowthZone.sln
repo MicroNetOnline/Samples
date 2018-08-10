@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationCodeFlow", "Au
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowthZone.Shared", "GrowthZone.Shared\GrowthZone.Shared.csproj", "{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth", "OAuth", "{3573E19E-FE30-48DB-9E10-524BD2E27BFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E10E43BB-A33C-46D3-89FA-E68C64A98B08} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
+		{054A159C-6780-446E-9FF0-E69AB989EDA5} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
+		{46B5F588-739D-4636-831B-51F98BA6A00F} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
+		{90F7375E-BDF8-4A5C-8BEE-DC760850398E} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1996296-A6A2-4E2E-A644-02FAB85D3D6D}
