@@ -1,11 +1,11 @@
-﻿using MicroNet.MMP.Shared;
-using System;
+﻿using System;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using GrowthZone.Shared;
 using Thinktecture.IdentityModel.Client;
 
-namespace AuthorizationCodeFlow.Mvc.Controllers
+namespace AuthorizationCodeFlow.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,8 +18,8 @@ namespace AuthorizationCodeFlow.Mvc.Controllers
 
         public ActionResult Login()
         {
-            var client = new OAuth2Client(new Uri($"{MemberZoneClient.Host}/oauth/authorize"));
-            var authorizeUrl = client.CreateAuthorizeUrl(MemberZoneClient.ClientId, "code", redirectUri: RedirectUri);
+            var client = new OAuth2Client(new Uri($"{GrowthZoneClient.Host}/oauth/authorize"));
+            var authorizeUrl = client.CreateAuthorizeUrl(GrowthZoneClient.ClientId, "code", redirectUri: RedirectUri);
 
             return Redirect(authorizeUrl);
         }
@@ -35,9 +35,9 @@ namespace AuthorizationCodeFlow.Mvc.Controllers
             }
 
             var authClient = new OAuth2Client(
-                new Uri($"{MemberZoneClient.Host}/oauth/token"),
-                MemberZoneClient.ClientId, 
-                MemberZoneClient.ClientSecret, 
+                new Uri($"{GrowthZoneClient.Host}/oauth/token"),
+                GrowthZoneClient.ClientId, 
+                GrowthZoneClient.ClientSecret, 
                 OAuth2Client.ClientAuthenticationStyle.PostValues);
 
             var tokenResponse = await authClient.RequestAuthorizationCodeAsync(code, RedirectUri);
@@ -47,7 +47,7 @@ namespace AuthorizationCodeFlow.Mvc.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.InternalServerError);
             }
 
-            using (var client = new MemberZoneClient(new Uri(MemberZoneClient.Host), tokenResponse.AccessToken))
+            using (var client = new GrowthZoneClient(new Uri(GrowthZoneClient.Host), tokenResponse.AccessToken))
             {
                 var claims = await client.GetClaimsAsync();
 

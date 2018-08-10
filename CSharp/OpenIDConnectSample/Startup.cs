@@ -1,19 +1,19 @@
-﻿using MicroNet.MMP.Shared;
+﻿using System;
+using System.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using GrowthZone.Shared;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
+using OpenIDConnect;
 using Owin;
-using System;
-using System.IdentityModel.Tokens;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Thinktecture.IdentityModel.Client;
 
-[assembly: OwinStartup(typeof(OpenIDConnectSample.Startup))]
-namespace OpenIDConnectSample
+[assembly: OwinStartup(typeof(Startup))]
+namespace OpenIDConnect
 {
     public partial class Startup
     {
@@ -32,11 +32,11 @@ namespace OpenIDConnectSample
                 {
                     AuthenticationMode = AuthenticationMode.Active,
 
-                    Authority = MemberZoneClient.Host,
-                    MetadataAddress = $"{MemberZoneClient.Host}/openid/well-known/openid-configuration",
+                    Authority = GrowthZoneClient.Host,
+                    MetadataAddress = $"{GrowthZoneClient.Host}/openid/well-known/openid-configuration",
 
-                    ClientId = MemberZoneClient.ClientId,
-                    ClientSecret = MemberZoneClient.ClientSecret,
+                    ClientId = GrowthZoneClient.ClientId,
+                    ClientSecret = GrowthZoneClient.ClientSecret,
                     RedirectUri = "http://localhost:44943/openid/callback",
                     PostLogoutRedirectUri = "http://localhost:44943/",
                     
@@ -65,9 +65,9 @@ namespace OpenIDConnectSample
                         AuthorizationCodeReceived = async n =>
                         {
                             var authClient = new OAuth2Client(
-                                new Uri($"{MemberZoneClient.Host}/oauth/token"),
-                                MemberZoneClient.ClientId, 
-                                MemberZoneClient.ClientSecret, 
+                                new Uri($"{GrowthZoneClient.Host}/oauth/token"),
+                                GrowthZoneClient.ClientId, 
+                                GrowthZoneClient.ClientSecret, 
                                 OAuth2Client.ClientAuthenticationStyle.PostValues);
                             
                             var tokenResponse = await authClient.RequestAuthorizationCodeAsync(n.Code, n.RedirectUri);
@@ -84,7 +84,7 @@ namespace OpenIDConnectSample
                             identity.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
                             identity.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
 
-                            var userClient = new UserInfoClient(new Uri($"{MemberZoneClient.Host}/oauth/userinfo"), tokenResponse.AccessToken);
+                            var userClient = new UserInfoClient(new Uri($"{GrowthZoneClient.Host}/oauth/userinfo"), tokenResponse.AccessToken);
 
                             //// The following is optional if you want additioanl profile information about the user
                             //var userResponse = await userClient.GetAsync();

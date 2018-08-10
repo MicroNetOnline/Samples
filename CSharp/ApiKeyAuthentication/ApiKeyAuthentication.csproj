@@ -53,9 +53,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MicroNet.MMP.Shared\MicroNet.MMP.Shared.csproj">
-      <Project>{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}</Project>
-      <Name>MicroNet.MMP.Shared</Name>
+    <ProjectReference Include="..\GrowthZone.Shared\GrowthZone.Shared.csproj">
+      <Project>{87dc5506-8de4-4682-a58e-cf1a3b0eb401}</Project>
+      <Name>GrowthZone.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

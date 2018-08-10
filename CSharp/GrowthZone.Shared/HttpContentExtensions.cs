@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace MicroNet.MMP.Shared
+namespace GrowthZone.Shared
 {
     public static class HttpContentExtensions
     {

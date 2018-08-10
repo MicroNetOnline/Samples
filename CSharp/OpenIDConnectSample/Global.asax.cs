@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OpenIDConnectSample
+namespace OpenIDConnect
 {
     public class MvcApplication : HttpApplication
     {

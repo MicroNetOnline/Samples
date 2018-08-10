@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MicroNet.MMP.Shared
+namespace GrowthZone.Shared
 {
-    public sealed class MemberZoneClient : IDisposable
+    public sealed class GrowthZoneClient : IDisposable
     {
         public const string Host = "https://gz-10958.growthzonebranch.com";
         public const string ClientId = "g5Txkot0B7EZi984wFXP7ygeBIuGQg3CuWnGc6JRT0Q";
@@ -23,7 +23,7 @@ namespace MicroNet.MMP.Shared
         /// </summary>
         /// <param name="endpoint">The API endpoint to connect to.</param>
         /// <param name="accessToken">The access token for the login.</param>
-        public MemberZoneClient(Uri endpoint, string accessToken)
+        public GrowthZoneClient(Uri endpoint, string accessToken)
         {
             _httpClient = new HttpClient { BaseAddress = endpoint };
 

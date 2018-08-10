@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Linq;
-using System.Collections.Generic;
+using System.Net;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using MicroNet.MMP.Shared;
-using System.Security.Claims;
-using System.Net;
-using Owin;
-using Microsoft.Owin.Security.OpenIdConnect;
+using GrowthZone.Shared;
 using Microsoft.Owin.Security;
-using System.Threading.Tasks;
-using System.Net.Http;
+using Microsoft.Owin.Security.OpenIdConnect;
 
-namespace OpenIDConnectSample.Controllers
+namespace OpenIDConnect.Controllers
 {
     public class HomeController : Controller
     {
@@ -58,7 +54,7 @@ namespace OpenIDConnectSample.Controllers
             // the access token for the GrowthZone API is contained as a claim
             var accessToken = user.FindFirst("access_token").Value;
             
-            using (var client = new MemberZoneClient(new Uri(MemberZoneClient.Host), accessToken))
+            using (var client = new GrowthZoneClient(new Uri(GrowthZoneClient.Host), accessToken))
             {
                 var claims = await client.GetClaimsAsync();
 

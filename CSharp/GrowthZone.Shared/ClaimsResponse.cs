@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MicroNet.MMP.Shared
+namespace GrowthZone.Shared
 {
     public sealed class ClaimsResponse
     {

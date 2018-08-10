@@ -1,4 +1,4 @@
-﻿namespace MicroNet.MMP.Shared
+﻿namespace GrowthZone.Shared
 {
     public class ClaimItem
     {

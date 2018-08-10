@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace AuthorizationCodeFlow.Mvc
+namespace AuthorizationCodeFlow
 {
     public class MvcApplication : System.Web.HttpApplication
     {

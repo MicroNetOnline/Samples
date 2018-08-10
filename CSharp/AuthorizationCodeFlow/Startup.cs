@@ -1,9 +1,9 @@
-﻿using AuthorizationCodeFlow.Mvc;
+﻿using AuthorizationCodeFlow;
 using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartup(typeof(Startup))]
-namespace AuthorizationCodeFlow.Mvc
+namespace AuthorizationCodeFlow
 {
     public partial class Startup
     {

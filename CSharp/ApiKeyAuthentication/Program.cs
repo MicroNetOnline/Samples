@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Http;
-using MicroNet.MMP.Shared;
+using GrowthZone.Shared;
 
 namespace ApiKeyAuthentication
 {

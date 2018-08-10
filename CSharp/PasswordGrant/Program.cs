@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
-using MicroNet.MMP.Shared;
+using GrowthZone.Shared;
 using Thinktecture.IdentityModel.Client;
 
 namespace PasswordGrant
@@ -21,16 +21,16 @@ namespace PasswordGrant
             var password = Console.ReadLine();
 
             var oAuthClient = new OAuth2Client(
-                new Uri($"{MemberZoneClient.Host}/oauth/token"),
-                MemberZoneClient.ClientId, 
-                MemberZoneClient.ClientSecret, 
+                new Uri($"{GrowthZoneClient.Host}/oauth/token"),
+                GrowthZoneClient.ClientId, 
+                GrowthZoneClient.ClientSecret, 
                 OAuth2Client.ClientAuthenticationStyle.PostValues);
 
             var response = oAuthClient.RequestResourceOwnerPasswordAsync(username, password).Result;
             Console.WriteLine(response.AccessToken);
 
             Console.WriteLine("\n\nDisplaying your claims.");
-            using (var client = new MemberZoneClient(new Uri(MemberZoneClient.Host), response.AccessToken))
+            using (var client = new GrowthZoneClient(new Uri(GrowthZoneClient.Host), response.AccessToken))
             {
                 var claims = client.GetClaimsAsync().Result;
 

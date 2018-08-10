@@ -7,8 +7,8 @@
     <ProjectGuid>{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MicroNet.MMP.Shared</RootNamespace>
-    <AssemblyName>MicroNet.MMP.Shared</AssemblyName>
+    <RootNamespace>GrowthZone.Shared</RootNamespace>
+    <AssemblyName>GrowthZone.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,7 +47,7 @@
     <Compile Include="ClaimItem.cs" />
     <Compile Include="ClaimsResponse.cs" />
     <Compile Include="HttpContentExtensions.cs" />
-    <Compile Include="MemberZoneClient.cs" />
+    <Compile Include="GrowthZoneClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

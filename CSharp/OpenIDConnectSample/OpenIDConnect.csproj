@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenIDConnectSample</RootNamespace>
-    <AssemblyName>OpenIDConnectSample</AssemblyName>
+    <RootNamespace>OpenIDConnect</RootNamespace>
+    <AssemblyName>OpenIDConnect</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -194,14 +194,14 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MicroNet.MMP.Shared\MicroNet.MMP.Shared.csproj">
-      <Project>{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}</Project>
-      <Name>MicroNet.MMP.Shared</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Home\Claims.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrowthZone.Shared\GrowthZone.Shared.csproj">
+      <Project>{87dc5506-8de4-4682-a58e-cf1a3b0eb401}</Project>
+      <Name>GrowthZone.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
