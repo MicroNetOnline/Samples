@@ -52,8 +52,7 @@ namespace OpenIDConnect
                     {
                         NameClaimType = "name",
                         RoleClaimType = "role",
-                        //ValidIssuer = "http://micronet.localtest.me:12221/"
-                        ValidIssuer = "https://growthzone.gz-10958.growthzonebranch.com/"
+                        ValidateIssuer = false
                     },
 
                     SignInAsAuthenticationType = CookieAuthenticationDefaults.AuthenticationType,
@@ -84,7 +83,7 @@ namespace OpenIDConnect
                             identity.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
                             identity.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
 
-                            var userClient = new UserInfoClient(new Uri($"{GrowthZoneClient.Host}/oauth/userinfo"), tokenResponse.AccessToken);
+                            //var userClient = new UserInfoClient(new Uri($"{GrowthZoneClient.Host}/oauth/userinfo"), tokenResponse.AccessToken);
 
                             //// The following is optional if you want additioanl profile information about the user
                             //var userResponse = await userClient.GetAsync();
