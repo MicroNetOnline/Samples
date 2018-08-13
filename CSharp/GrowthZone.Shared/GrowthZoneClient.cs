@@ -8,13 +8,13 @@ namespace GrowthZone.Shared
 {
     public sealed class GrowthZoneClient : IDisposable
     {
-        public const string Host = "https://growthzonedev.com";
-        public const string ClientId = "g5Txkot0B7EZi984wFXP7ygeBIuGQg3CuWnGc6JRT0Q";
-        public const string ClientSecret = "047jDzUIphXCJVUP9hwqgw";
+        //public const string Host = "https://growthzonedev.com";
+        //public const string ClientId = "g5Txkot0B7EZi984wFXP7ygeBIuGQg3CuWnGc6JRT0Q";
+        //public const string ClientSecret = "047jDzUIphXCJVUP9hwqgw";
 
-        //public const string Host = "http://localtest.me:12221";
-        //public const string ClientId = "123ABC";
-        //public const string ClientSecret = "JxEF1YrH2XCBQHoV708Yw";
+        public const string Host = "http://localtest.me:12221";
+        public const string ClientId = "123ABC";
+        public const string ClientSecret = "JxEF1YrH2XCBQHoV708Yw";
 
         readonly HttpClient _httpClient;
 
