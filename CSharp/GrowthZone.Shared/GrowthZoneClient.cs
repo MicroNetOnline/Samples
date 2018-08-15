@@ -8,9 +8,10 @@ namespace GrowthZone.Shared
 {
     public sealed class GrowthZoneClient : IDisposable
     {
-        public const string Host = "https://growthzonedev.com";
-        public const string ClientId = "g5Txkot0B7EZi984wFXP7ygeBIuGQg3CuWnGc6JRT0Q";
-        public const string ClientSecret = "047jDzUIphXCJVUP9hwqgw";
+        //public const string Host = "https://tardisenterprises.gz-10958.growthzonebranch.com";
+        public const string Host = "https://growthzone.growthzonedev.com";
+        public const string ClientId = "OG46DpRN3j0dnD3os9debN0djKXNllI6VH73jfaGRtI";
+        public const string ClientSecret = "GeD13PT6MsdcHhD80kX0Vw";
 
         //public const string Host = "http://localtest.me:12221";
         //public const string ClientId = "123ABC";

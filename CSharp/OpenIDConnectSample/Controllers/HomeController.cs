@@ -12,9 +12,12 @@ namespace OpenIDConnect.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
+        static HomeController()
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            // ignore certificate errors when testing
+            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
         }
 
         public ActionResult Index()

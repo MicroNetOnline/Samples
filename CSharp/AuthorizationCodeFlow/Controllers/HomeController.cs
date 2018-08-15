@@ -27,6 +27,9 @@ namespace AuthorizationCodeFlow.Controllers
         public async Task<ActionResult> OAuthCallback(string code, string error)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            // ignore certificate errors when testing
+            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
             
             if (error != null)
             {
