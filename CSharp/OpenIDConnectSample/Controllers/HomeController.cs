@@ -27,8 +27,6 @@ namespace OpenIDConnect.Controllers
 
         public ActionResult Login()
         {
-            var manager = HttpContext.GetOwinContext().Authentication;
-
             var properties = new AuthenticationProperties
             {
                 RedirectUri = "/home/claims"                
