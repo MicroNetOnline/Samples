@@ -10,7 +10,7 @@ namespace GrowthZone.Reports
     {
         static void Main(string[] args)
         {
-            var report = new ReportSample("http://localtest.me:12221", "admin", "migteam", "TWljcm9OZXRNZW1iZXJab25lQ2xpZW50", "SmhhOThqamRoO2lma2pKVUFTaGRubW5mamFnLTM4OTRrYTcyamJkOzM4");
+            var report = new ReportSample("http://localtest.me:12221", "", "", "", "");
             var reportData = report.ExecuteReport("ContactReport", 60);
 
             Console.Write(reportData);
