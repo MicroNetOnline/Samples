@@ -19,7 +19,7 @@
     <div>
       <h1>Click the link below to login</h1>
       <div class="container">
-        <a href="<?php echo OAUTH_AUTHORIZE_URI; ?>?client_id=<?php echo OAUTH_CLIENT_ID; ?>&response_type=code&redirect_uri=<?php echo $redirect_uri; ?>">
+        <a href="<?php echo OAUTH_AUTHORIZE_URI; ?>?client_id=<?php echo OAUTH_CLIENT_ID; ?>&response_type=code&scope=offline_access&redirect_uri=<?php echo $redirect_uri; ?>">
           Authenticate
         </a>
       </div>
