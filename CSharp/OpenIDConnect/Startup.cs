@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using GrowthZone.Shared;
-using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
@@ -14,7 +12,6 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
 using OpenIDConnect;
 using Owin;
-using Thinktecture.IdentityModel.Client;
 
 [assembly: OwinStartup(typeof(Startup))]
 namespace OpenIDConnect

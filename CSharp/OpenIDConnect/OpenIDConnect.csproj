@@ -214,7 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GrowthZone.Shared\GrowthZone.Shared.csproj">
-      <Project>{87dc5506-8de4-4682-a58e-cf1a3b0eb401}</Project>
+      <Project>{211475BE-09AB-4758-9CC6-2E755ADA62CD}</Project>
       <Name>GrowthZone.Shared</Name>
     </ProjectReference>
   </ItemGroup>

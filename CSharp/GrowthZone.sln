@@ -1,21 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGrant", "PasswordGrant\PasswordGrant.csproj", "{E10E43BB-A33C-46D3-89FA-E68C64A98B08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiKeyAuthentication", "ApiKeyAuthentication\ApiKeyAuthentication.csproj", "{054A159C-6780-446E-9FF0-E69AB989EDA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDConnect", "OpenIDConnectSample\OpenIDConnect.csproj", "{46B5F588-739D-4636-831B-51F98BA6A00F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDConnect", "OpenIDConnect\OpenIDConnect.csproj", "{46B5F588-739D-4636-831B-51F98BA6A00F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationCodeFlow", "AuthorizationCodeFlow\AuthorizationCodeFlow.csproj", "{90F7375E-BDF8-4A5C-8BEE-DC760850398E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowthZone.Shared", "GrowthZone.Shared\GrowthZone.Shared.csproj", "{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth", "OAuth", "{3573E19E-FE30-48DB-9E10-524BD2E27BFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowthZone.Reports", "GrowthZone.Reports\GrowthZone.Reports.csproj", "{9DA6B036-5DC4-40E0-A6DD-007438D41C75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Single Sign on", "Single Sign on", "{419864AD-BA9C-447A-B3BE-BF08DF38857D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleSignOnLink", "SingleSignOnLink\SingleSignOnLink.csproj", "{106AB3BA-D120-45E8-9927-186EBA583EDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowthZone.Shared", "GrowthZone.Shared\GrowthZone.Shared.csproj", "{211475BE-09AB-4758-9CC6-2E755ADA62CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +43,18 @@ Global
 		{90F7375E-BDF8-4A5C-8BEE-DC760850398E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90F7375E-BDF8-4A5C-8BEE-DC760850398E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90F7375E-BDF8-4A5C-8BEE-DC760850398E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87DC5506-8DE4-4682-A58E-CF1A3B0EB401}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DA6B036-5DC4-40E0-A6DD-007438D41C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9DA6B036-5DC4-40E0-A6DD-007438D41C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DA6B036-5DC4-40E0-A6DD-007438D41C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DA6B036-5DC4-40E0-A6DD-007438D41C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106AB3BA-D120-45E8-9927-186EBA583EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106AB3BA-D120-45E8-9927-186EBA583EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106AB3BA-D120-45E8-9927-186EBA583EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106AB3BA-D120-45E8-9927-186EBA583EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211475BE-09AB-4758-9CC6-2E755ADA62CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211475BE-09AB-4758-9CC6-2E755ADA62CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211475BE-09AB-4758-9CC6-2E755ADA62CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211475BE-09AB-4758-9CC6-2E755ADA62CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +64,7 @@ Global
 		{054A159C-6780-446E-9FF0-E69AB989EDA5} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
 		{46B5F588-739D-4636-831B-51F98BA6A00F} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
 		{90F7375E-BDF8-4A5C-8BEE-DC760850398E} = {3573E19E-FE30-48DB-9E10-524BD2E27BFF}
+		{106AB3BA-D120-45E8-9927-186EBA583EDB} = {419864AD-BA9C-447A-B3BE-BF08DF38857D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1996296-A6A2-4E2E-A644-02FAB85D3D6D}
