@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace SingleSignOnLink.Services
+namespace ProviderInitiatedSingleSignOn.Services
 {
     public sealed class StateService
     {

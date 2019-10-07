@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowthZone.Reports", "Growt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Single Sign on", "Single Sign on", "{419864AD-BA9C-447A-B3BE-BF08DF38857D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleSignOnLink", "SingleSignOnLink\SingleSignOnLink.csproj", "{106AB3BA-D120-45E8-9927-186EBA583EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProviderInitiatedSingleSignOn", "ProviderInitiatedSingleSignOn\ProviderInitiatedSingleSignOn.csproj", "{106AB3BA-D120-45E8-9927-186EBA583EDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowthZone.Shared", "GrowthZone.Shared\GrowthZone.Shared.csproj", "{211475BE-09AB-4758-9CC6-2E755ADA62CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrowthZone.Shared", "GrowthZone.Shared\GrowthZone.Shared.csproj", "{211475BE-09AB-4758-9CC6-2E755ADA62CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

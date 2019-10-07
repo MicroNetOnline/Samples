@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SingleSignOnLink.Controllers
+namespace ProviderInitiatedSingleSignOn.Controllers
 {
     [Route("forums")]
     public sealed class ForumsController : Controller

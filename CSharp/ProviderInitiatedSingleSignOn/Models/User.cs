@@ -1,4 +1,4 @@
-﻿namespace SingleSignOnLink.Models
+﻿namespace ProviderInitiatedSingleSignOn.Models
 {
     public sealed class User
     {

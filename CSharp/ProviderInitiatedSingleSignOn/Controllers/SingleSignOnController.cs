@@ -13,10 +13,10 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using SingleSignOnLink.Models;
-using SingleSignOnLink.Services;
+using ProviderInitiatedSingleSignOn.Models;
+using ProviderInitiatedSingleSignOn.Services;
 
-namespace SingleSignOnLink.Controllers
+namespace ProviderInitiatedSingleSignOn.Controllers
 {
     [Route("sso")]
     public sealed class SingleSignOnController : Controller
@@ -139,7 +139,7 @@ namespace SingleSignOnLink.Controllers
                     userRepository.Save(user);
                 }
 
-                // once we have the user we can sign them
+                // once we have the user we can sign them in
                 var claimsIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
 
                 claimsIdentity.AddClaim(new Claim(ClaimTypes.Name, user.Email));

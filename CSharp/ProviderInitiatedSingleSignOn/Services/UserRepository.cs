@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using SingleSignOnLink.Models;
+using ProviderInitiatedSingleSignOn.Models;
 
-namespace SingleSignOnLink.Services
+namespace ProviderInitiatedSingleSignOn.Services
 {
     public sealed class UserRepository
     {
