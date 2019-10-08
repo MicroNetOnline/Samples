@@ -60,7 +60,7 @@ namespace ProviderInitiatedSingleSignOn.Controllers
             {
                 { "response_type", "code" },
                 { "response_mode", "form_post" },
-                { "scope", "openid profile offline_access" },
+                { "scope", "openid profile email offline_access" },
                 { "client_id", GrowthZoneClient.ClientId },
                 { "redirect_uri", "http://localhost:51843/sso/callback" },
                 { "state", state }
