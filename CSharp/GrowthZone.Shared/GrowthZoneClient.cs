@@ -12,13 +12,13 @@ namespace GrowthZone.Shared
         //public const string ClientId = "<client id>";
         //public const string ClientSecret = "<client secret>";
 
-        public const string Host = "http://test1.localtest.me:12221";
-        public const string ClientId = "MnW6ar1wXwbVpm5LVzuTJg";
-        public const string ClientSecret = "6Cfi2JwUDq1FfeiRzUiYBfuno1IWuMqiUfQkkPqqz4";
+        public const string Host = "http://localtest.me:12221";
+        public const string ClientId = "73WLJTHDailzO1s22deT";
+        public const string ClientSecret = "lG94S1LyeKLpvZzok2fTseDkobanBNdhgRKA322R";
 
         //public const string Host = "https://growthzone.growthzoneapp.com";
-        //public const string ClientId = "KqhPqaHocxoVxw1S9cIfwanUR10vcCYuxJWl907Tg";
-        //public const string ClientSecret = "mzpNMa5F7pX6XI9mAxG2FQ";
+        //public const string ClientId = "a";
+        //public const string ClientSecret = "b";
 
         readonly HttpClient _httpClient;
 

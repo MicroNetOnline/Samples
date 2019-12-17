@@ -7,7 +7,7 @@ namespace ApiKeyAuthentication
     class Program
     {
         const string Host = "http://test1.localtest.me:12221";
-        const string ApiKey = "uPksiV351SYVqhmotkiATUTCr1E3BWBNYAUG4fA";
+        const string ApiKey = "qliLJMkMFtLglGqp0cV2M0hwPDQma3u4vjQfCec8Q";
         
         static void Main(string[] args)
         {

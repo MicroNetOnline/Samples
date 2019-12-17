@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using GrowthZone.Shared;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin;
@@ -47,11 +48,10 @@ namespace OpenIDConnect
                     // We set the response type to be code + id_token as we want to use GrowthZone as an SSO provider
                     // and also access the GrowthZone API on behalf of the user. If you want to use GrowthZone purely 
                     // as an SSO provider then the ResponseType can just be "id_token". 
-                    //ResponseType = "code id_token",
                     ResponseType = "code",
 
                     // The scope below must include "openid" in order for the id_token to be returned.
-                    Scope = "openid profile offline_access",
+                    Scope = "openid profile email offline_access",
 
                     TokenValidationParameters = new TokenValidationParameters
                     {
