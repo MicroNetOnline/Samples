@@ -4,7 +4,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using GrowthZone.Shared;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin;
